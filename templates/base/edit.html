@@ -1,0 +1,19 @@
+{% extends 'base.html' %}
+{% block content %}
+<form  method="POST">
+    {% csrf_token %}
+    {{form.full_name}}
+    {{form.mobile}}
+    <div class="row">
+        <div class="col-md-4">
+            {{form.emp_code}}
+        </div>
+        <div class="col md-8">
+            {{form.position}}
+        </div>
+    </div>
+    <button type="Submit" class="btn btn-success">
+        <i class="fa-solid fa-database"></i>
+        Save</button>
+</form>
+{% endblock content %}
